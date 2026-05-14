@@ -1,0 +1,122 @@
+/* =====================================================
+   FOODMAP — Home Page Styles
+   ===================================================== */
+
+/* ── Hero ── */
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xxl);
+  align-items: center;
+}
+
+.hero__cta {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.hero__map-placeholder {
+  background-color: var(--color-surface-container);
+  border-radius: var(--radius-xl);
+  border: 1.5px dashed var(--color-outline-variant);
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+}
+
+/* ── Stats ── */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg);
+}
+
+.stat-card { text-align: center; }
+
+.stat-value {
+  font-family: var(--font-serif);
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--color-primary);
+  line-height: 1;
+  margin-bottom: var(--space-sm);
+}
+
+.stat-unit {
+  font-size: 20px;
+  margin-left: 2px;
+}
+
+/* ── Steps ── */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+.step-card {
+  padding: var(--space-lg);
+  background-color: var(--color-surface-container-lowest);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+}
+
+.step-icon {
+  font-size: 40px;
+  margin-bottom: var(--space-sm);
+}
+
+.step-number {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* ── Personas ── */
+.personas-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-xl);
+}
+
+.persona-card {
+  display: flex;
+  gap: var(--space-lg);
+  align-items: flex-start;
+}
+
+.persona-avatar {
+  font-size: 56px;
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  background-color: var(--color-surface-container);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.persona-quote {
+  font-style: italic;
+  color: var(--color-on-surface-variant);
+  border-left: 3px solid var(--color-primary-fixed-dim);
+  padding-left: var(--space-md);
+}
+
+/* ── Responsivo ── */
+@media (max-width: 1023px) {
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 767px) {
+  .hero__inner         { grid-template-columns: 1fr; }
+  .hero__visual        { display: none; }
+  .stats-grid          { grid-template-columns: repeat(2, 1fr); }
+  .steps-grid          { grid-template-columns: 1fr; }
+  .personas-grid       { grid-template-columns: 1fr; }
+  .persona-card        { flex-direction: column; }
+}

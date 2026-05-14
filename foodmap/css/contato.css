@@ -1,0 +1,116 @@
+/* =====================================================
+   FOODMAP — Contato Styles
+   ===================================================== */
+
+.contato-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: var(--space-xxl);
+  align-items: flex-start;
+}
+
+/* Cards de contato */
+.contato-cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.contato-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+}
+.contato-card:hover { transform: translateX(4px); }
+
+.contato-card__icon {
+  font-size: 24px;
+  width: 48px;
+  height: 48px;
+  background-color: var(--color-surface-container);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ODS Badge */
+.ods-card { margin-top: var(--space-md); }
+
+.ods-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-secondary-container);
+  border-radius: var(--radius-md);
+  text-align: center;
+  font-size: var(--text-label-sm-size);
+  color: var(--color-primary);
+}
+.ods-badge strong { font-size: 20px; font-family: var(--font-serif); }
+
+/* Formulário */
+.contato-form-wrapper { }
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--space-lg);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.form-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+.form-checkbox input { margin-top: 2px; accent-color: var(--color-primary); }
+
+/* FAQ */
+.faq-list { display: flex; flex-direction: column; }
+
+.faq-item {
+  border-bottom: 1px solid var(--color-outline-variant);
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-lg) 0;
+  background: none;
+  border: none;
+  text-align: left;
+  font-family: var(--font-sans);
+  font-size: var(--text-body-lg-size);
+  font-weight: 500;
+  color: var(--color-on-surface);
+  cursor: pointer;
+  gap: var(--space-md);
+}
+.faq-question:hover { color: var(--color-primary); }
+
+.faq-arrow { color: var(--color-primary); font-size: 16px; flex-shrink: 0; }
+
+.faq-answer {
+  display: none;
+  padding-bottom: var(--space-lg);
+}
+.faq-answer--open { display: block; }
+
+/* ── Responsivo ── */
+@media (max-width: 900px) {
+  .contato-layout { grid-template-columns: 1fr; }
+  .form-row       { grid-template-columns: 1fr; }
+}

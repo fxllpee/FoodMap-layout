@@ -1,0 +1,58 @@
+/* =====================================================
+   FOODMAP — Como Funciona Styles
+   ===================================================== */
+
+.cf-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+.cf-step {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: var(--space-xl);
+  align-items: flex-start;
+  padding-bottom: var(--space-xl);
+}
+
+.cf-step__visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cf-step__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-surface-container);
+  border: 2px solid var(--color-outline-variant);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.cf-step__line {
+  width: 2px;
+  flex: 1;
+  min-height: 40px;
+  background: linear-gradient(to bottom, var(--color-outline-variant), transparent);
+  margin-top: var(--space-sm);
+}
+
+.cf-step__line--hidden { opacity: 0; }
+
+.cf-step__content { flex: 1; }
+
+@media (max-width: 767px) {
+  .cf-step {
+    grid-template-columns: 48px 1fr;
+    gap: var(--space-md);
+  }
+  .cf-step__icon { width: 44px; height: 44px; font-size: 20px; }
+}

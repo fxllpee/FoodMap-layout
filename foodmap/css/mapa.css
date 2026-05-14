@@ -1,0 +1,150 @@
+/* =====================================================
+   FOODMAP — Mapa Page Styles
+   ===================================================== */
+
+.mapa-layout {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  height: calc(100vh - 64px); /* 64px = navbar */
+  overflow: hidden;
+}
+
+/* ── Canvas do Mapa ── */
+.mapa-canvas {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+#map {
+  flex: 1;
+  z-index: 0;
+}
+
+/* ── Topbar (busca + filtros) ── */
+.mapa-topbar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  background-color: var(--color-surface-container-lowest);
+  border-bottom: 1px solid var(--color-outline-variant);
+  z-index: 10;
+}
+
+.mapa-search {
+  position: relative;
+}
+
+.mapa-search__icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+}
+
+.mapa-search__input {
+  padding-left: 44px;
+}
+
+.mapa-filters {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.filter-chip {
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: var(--text-label-sm-size);
+  font-weight: 600;
+  background-color: var(--color-surface-container);
+  color: var(--color-on-surface-variant);
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.filter-chip:hover         { border-color: var(--color-primary); color: var(--color-primary); }
+.filter-chip--active       {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+/* ── Legenda ── */
+.mapa-legend {
+  position: absolute;
+  bottom: var(--space-lg);
+  left: var(--space-lg);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  min-width: 140px;
+}
+
+.mapa-legend__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: var(--text-label-sm-size);
+  font-weight: 500;
+  color: var(--color-on-surface-variant);
+}
+
+.mapa-pin {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  flex-shrink: 0;
+}
+.mapa-pin--doador  { background-color: var(--color-primary); }
+.mapa-pin--receptor{ background-color: var(--color-secondary); }
+.mapa-pin--urgente { background-color: var(--color-error); }
+
+/* ── Sidebar ── */
+.mapa-sidebar {
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid var(--color-outline-variant);
+  background-color: var(--color-surface-container-lowest);
+  overflow: hidden;
+}
+
+.mapa-sidebar__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-lg);
+  border-bottom: 1px solid var(--color-outline-variant);
+  flex-shrink: 0;
+}
+
+.mapa-sidebar__list {
+  overflow-y: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding: var(--space-md);
+}
+
+.donation-card {
+  cursor: pointer;
+  border: 1.5px solid transparent;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.donation-card:hover { border-color: var(--color-primary); }
+
+/* ── Responsivo ── */
+@media (max-width: 900px) {
+  .mapa-layout {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  #map { height: 50vh; }
+  .mapa-sidebar { max-height: 50vh; }
+}

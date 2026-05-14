@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FoodMap — Mapa de Doações</title>
+
+  <!-- Leaflet (mapa interativo) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- Design System -->
+  <link rel="stylesheet" href="../css/tokens.css" />
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/navbar.css" />
+  <link rel="stylesheet" href="../css/footer.css" />
+  <link rel="stylesheet" href="../css/mapa.css" />
+</head>
+<body>
+
+  <div id="navbar"></div>
+
+  <main class="mapa-layout">
+
+    <!-- ── Painel Esquerdo: Mapa ──────────────────────── -->
+    <div class="mapa-canvas">
+
+      <!-- Barra de busca e filtros -->
+      <div class="mapa-topbar">
+        <div class="mapa-search">
+          <span class="mapa-search__icon">🔍</span>
+          <input
+            class="input mapa-search__input"
+            type="text"
+            id="mapSearch"
+            placeholder="Buscar bairro, cidade ou CEP..."
+          />
+        </div>
+
+        <div class="mapa-filters" id="mapaFilters">
+          <!-- preenchido pelo mapa.js -->
+        </div>
+      </div>
+
+      <!-- Mapa Leaflet -->
+      <div id="map"></div>
+
+      <!-- Legenda -->
+      <div class="mapa-legend card">
+        <p class="label-sm" style="margin-bottom: var(--space-sm); text-transform: uppercase; letter-spacing: 0.06em;">Legenda</p>
+        <div class="mapa-legend__item"><span class="mapa-pin mapa-pin--doador"></span> Doador</div>
+        <div class="mapa-legend__item"><span class="mapa-pin mapa-pin--receptor"></span> Receptor</div>
+        <div class="mapa-legend__item"><span class="mapa-pin mapa-pin--urgente"></span> Urgente</div>
+      </div>
+
+    </div>
+
+    <!-- ── Painel Direito: Sidebar ──────────────────────── -->
+    <aside class="mapa-sidebar">
+      <div class="mapa-sidebar__header">
+        <h2 class="headline-md">Doações próximas</h2>
+        <span class="badge" id="donationCount">— disponíveis</span>
+      </div>
+
+      <div class="mapa-sidebar__list" id="donationList">
+        <!-- preenchido pelo mapa.js -->
+      </div>
+    </aside>
+
+  </main>
+
+  <!-- Scripts -->
+  <script src="../components/navbar.js"></script>
+  <script src="../js/mapa.js"></script>
+  <script>
+    NavBar.render('mapa');
+    MapPage.init();
+  </script>
+
+</body>
+</html>

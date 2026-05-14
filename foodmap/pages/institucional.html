@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FoodMap — Institucional & Impacto</title>
+
+  <link rel="stylesheet" href="../css/tokens.css" />
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/navbar.css" />
+  <link rel="stylesheet" href="../css/footer.css" />
+  <link rel="stylesheet" href="../css/institucional.css" />
+</head>
+<body>
+
+  <div id="navbar"></div>
+
+  <main>
+
+    <!-- ── Manifesto / Hero ── -->
+    <section class="section inst-hero">
+      <div class="container">
+        <div class="inst-hero__inner">
+          <div>
+            <span class="badge" style="margin-bottom: var(--space-md);">Nossa História</span>
+            <h1 class="display-lg" style="margin-bottom: var(--space-lg);">
+              Acreditamos que a fome é um problema de logística, não de escassez.
+            </h1>
+            <p class="body-lg text-muted">
+              Enquanto toneladas de alimentos são desperdiçadas todos os dias, milhões de brasileiros
+              passam por insegurança alimentar. O FoodMap nasceu para fechar essa lacuna —
+              com tecnologia, dados e, acima de tudo, conexões humanas.
+            </p>
+          </div>
+          <div class="inst-hero__year">
+            <p class="label-sm text-muted">Fundado em</p>
+            <p class="display-lg text-primary">2023</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Dados de Impacto ── -->
+    <section class="section" style="background-color: var(--color-surface-container-low);">
+      <div class="container">
+        <h2 class="headline-lg text-center" style="margin-bottom: var(--space-xxl);">Impacto em Números</h2>
+        <div class="impact-grid" id="impactGrid">
+          <!-- preenchido pelo institucional.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Transparência & Governança ── -->
+    <section class="section">
+      <div class="container" style="max-width: 800px;">
+        <h2 class="headline-lg" style="margin-bottom: var(--space-xxl);">Transparência & Governança</h2>
+        <div id="transparencyList">
+          <!-- preenchido pelo institucional.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Time ── -->
+    <section class="section" style="background-color: var(--color-surface-container-low);">
+      <div class="container">
+        <h2 class="headline-lg text-center" style="margin-bottom: var(--space-xxl);">Quem faz acontecer</h2>
+        <div class="team-grid" id="teamGrid">
+          <!-- preenchido pelo institucional.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Quote de impacto ── -->
+    <section class="section">
+      <div class="container" style="max-width: 720px; text-align: center;">
+        <blockquote class="inst-quote">
+          "Cada quilograma redistribuído representa uma família que dormiu sem fome."
+        </blockquote>
+        <p class="label-md text-muted" style="margin-top: var(--space-lg);">— Relatório de Impacto FoodMap 2024</p>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="../components/navbar.js"></script>
+  <script src="../components/footer.js"></script>
+  <script src="../js/institucional.js"></script>
+  <script>
+    NavBar.render('institucional');
+    Footer.render();
+    Institucional.render();
+  </script>
+
+</body>
+</html>

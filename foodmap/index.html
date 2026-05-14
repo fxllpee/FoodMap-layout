@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FoodMap — Início</title>
+
+  <!-- Design System -->
+  <link rel="stylesheet" href="./css/tokens.css" />
+  <link rel="stylesheet" href="./css/global.css" />
+  <link rel="stylesheet" href="./css/navbar.css" />
+  <link rel="stylesheet" href="./css/footer.css" />
+  <link rel="stylesheet" href="./css/home.css" />
+</head>
+<body>
+
+  <!-- NavBar -->
+  <div id="navbar">
+  
+  </div>
+
+  <main>
+
+    <!-- ── Hero Section ───────────────────────────────── -->
+    <section class="hero section">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <span class="badge" style="margin-bottom: var(--space-md);">🌱 Plataforma de Impacto Social</span>
+          <h1 class="display-lg" style="margin-bottom: var(--space-lg);">
+            Conectando quem tem<br>com quem precisa.
+          </h1>
+          <p class="body-lg text-muted" style="max-width: 480px; margin-bottom: var(--space-xl);">
+            O FoodMap é uma plataforma colaborativa que combate o desperdício de alimentos
+            e a insegurança alimentar em tempo real, conectando doadores a quem mais precisa.
+          </p>
+          <div class="hero__cta">
+            <a href="./pages/mapa.html" class="btn btn-primary">Ver Mapa de Doações</a>
+            <a href="./pages/como-funciona.html" class="btn btn-outline">Como Funciona</a>
+          </div>
+        </div>
+        <div class="hero__visual">
+          <!-- Placeholder: substituir por imagem/mapa real -->
+          <div class="hero__map-placeholder">
+            <span style="font-size: 64px;">🗺️</span>
+            <p class="label-md text-muted">Mapa interativo em tempo real</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Nossa Missão ────────────────────────────────── -->
+    <section class="section-sm" style="background-color: var(--color-surface-container-low);">
+      <div class="container" style="text-align: center; max-width: 680px;">
+        <h2 class="headline-lg" style="margin-bottom: var(--space-lg);">Nossa Missão</h2>
+        <p class="body-lg text-muted">
+          Acreditamos que nenhum alimento deve ser desperdiçado enquanto alguém passa fome.
+          Usamos tecnologia para criar pontes humanas entre excesso e necessidade,
+          com transparência, dignidade e impacto mensurável.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── Estatísticas ────────────────────────────────── -->
+    <section class="section">
+      <div class="container">
+        <div class="stats-grid" id="statsGrid">
+          <!-- preenchido pelo home.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Como Funciona (resumo) ─────────────────────── -->
+    <section class="section" style="background-color: var(--color-surface-container-low);">
+      <div class="container">
+        <h2 class="headline-lg text-center" style="margin-bottom: var(--space-xxl);">Como Funciona</h2>
+        <div class="steps-grid" id="stepsGrid">
+          <!-- preenchido pelo home.js -->
+        </div>
+        <div class="text-center" style="margin-top: var(--space-xl);">
+          <a href="./pages/como-funciona.html" class="btn btn-secondary">Ver guia completo</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Personas ────────────────────────────────────── -->
+    <section class="section">
+      <div class="container">
+        <h2 class="headline-lg text-center" style="margin-bottom: var(--space-sm);">Histórias Reais</h2>
+        <p class="body-lg text-muted text-center" style="margin-bottom: var(--space-xxl);">
+          Conheça quem faz o FoodMap acontecer todo dia.
+        </p>
+        <div class="personas-grid" id="personasGrid">
+          <!-- preenchido pelo home.js -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <!-- Scripts -->
+  <script src="./components/navbar.js"></script>
+  <script src="./components/footer.js"></script>
+  <script src="./js/home.js"></script>
+  <script>
+    NavBar.render('index');
+    Footer.render();
+    Home.render();
+  </script>
+
+</body>
+</html>

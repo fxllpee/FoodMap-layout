@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FoodMap — Como Funciona</title>
+
+  <link rel="stylesheet" href="../css/tokens.css" />
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/navbar.css" />
+  <link rel="stylesheet" href="../css/footer.css" />
+  <link rel="stylesheet" href="../css/como-funciona.css" />
+</head>
+<body>
+
+  <div id="navbar"></div>
+
+  <main>
+
+    <!-- ── Hero ── -->
+    <section class="section" style="background-color: var(--color-surface-container-low); text-align: center;">
+      <div class="container" style="max-width: 680px;">
+        <span class="badge" style="margin-bottom: var(--space-md);">Guia Completo</span>
+        <h1 class="display-lg" style="margin-bottom: var(--space-lg);">Como o FoodMap funciona</h1>
+        <p class="body-lg text-muted">
+          Em poucos passos, você conecta alimentos disponíveis a quem precisa —
+          de forma simples, segura e transparente.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── Passo a passo ── -->
+    <section class="section">
+      <div class="container">
+        <div class="cf-steps" id="cfSteps">
+          <!-- preenchido pelo como-funciona.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA Final ── -->
+    <section class="section" style="background-color: var(--color-primary); text-align: center; margin-top: 0;">
+      <div class="container" style="max-width: 600px;">
+        <h2 class="headline-lg" style="color: var(--color-on-primary); margin-bottom: var(--space-md);">Pronto para fazer parte?</h2>
+        <p class="body-lg" style="color: rgba(255,255,255,0.8); margin-bottom: var(--space-xl);">
+          Junte-se a centenas de doadores e organizações que já transformam realidades.
+        </p>
+        <div style="display:flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
+          <a href="./mapa.html" class="btn" style="background: white; color: var(--color-primary);">Ver Mapa de Doações</a>
+          <a href="./contato.html" class="btn btn-outline" style="border-color: white; color: white;">Falar com a gente</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="../components/navbar.js"></script>
+  <script src="../components/footer.js"></script>
+  <script src="../js/como-funciona.js"></script>
+  <script>
+    NavBar.render('como-funciona');
+    Footer.render();
+    ComoFunciona.render();
+  </script>
+
+</body>
+</html>
